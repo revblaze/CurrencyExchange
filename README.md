@@ -1,7 +1,17 @@
 # CurrencyExchange
 Calculate international exchange rates using local resources and SQLite
 
-`currency > USD > currency`
+<p align="center"><img width="522" alt="Screenshot 2023-07-07 at 8 56 17 AM" src="https://github.com/revblaze/CurrencyExchange/assets/1476332/20dc624b-1a09-4e5d-a295-3dc2e60b9f31"></p>
+
+
+```swift
+let code = "EUR"
+let date = "2023-06-22" // YYYY-MM-DD
+
+if let rate = getUsdRate(currency: code, onDate: date) {
+  // rate: 0.910332  
+}
+```
 
 ## Source Route
 
@@ -72,3 +82,22 @@ EOF
 ```
 
 with command: `./csv_to_sqlite.sh path/to/your/csv_file.csv`
+
+## Conversion
+
+### Getting the historical rate to USD
+
+```swift
+getUsdRate(currency, onDate)
+```
+
+#### Usage
+
+```swift
+let code = "EUR"
+let date = "2023-06-22" // YYYY-MM-DD
+
+if let rate = getUsdRate(currency: code, onDate: date) {
+  // rate: 0.910332  
+}
+```
